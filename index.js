@@ -1,4 +1,8 @@
 const { Client, IntentsBitField } = require('discord.js');
+require('dotenv').config();
+
+const token = process.env.DISCORD_TOKEN;
+
 
 const client = new Client({
   intents: [
@@ -129,5 +133,5 @@ client.on('messageCreate', async (message) => {
   }
 });
 
-const token = 'MTEyMTIxNTA2NTI0MTE1NzY0NA.GTcOXn.auKM0UH5y7L3hRIGZfZG6tIPTSIzuNfR0pv7v0';
+
 client.login(token);
